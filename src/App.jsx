@@ -1,35 +1,64 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/* import './App.css'
+import { signInWithPopup } from 'firebase/auth';
+import {auth, provider} from "./firebase";
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+const handleClick = ()=> {
+  signInWithPopup(auth, provider);
+};
+console.log(auth);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className=''>
+      <h2>FIREBASE AUTH</h2>
+   
+      <h4>{auth?.currentUser?.displayName} </h4>
+      <h4>{auth?.currentUser?.email} </h4>
+      <button onClick={handleClick}>Google ile Gir</button>
+    </div>
   )
+}
+
+export default App */
+
+/* import LoginPage from "./pages/LoginPage";
+
+
+
+function App(){
+  return
+  
+ <LoginPage />;
+
+
+}
+
+export default App; */
+
+import { useState } from 'react';
+import LoginPage from './pages/LoginPage';
+import RoomPage from './pages/RoomPage';
+
+
+
+
+function App() {
+const [isAuth, setIsAuth] = useState(localStorage.getItem("token"));
+
+// kullanıcının yetkisi yoksa
+if(!isAuth){
+  return <LoginPage setIsAuth={setIsAuth} />;
+}
+
+//kullanıcının yetkisi varsa
+  return (
+    <div className='container'>
+      <RoomPage />
+    </div>
+  )
+
 }
 
 export default App
