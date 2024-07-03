@@ -37,28 +37,39 @@ function App(){
 
 export default App; */
 
-import { useState } from 'react';
-import LoginPage from './pages/LoginPage';
-import RoomPage from './pages/RoomPage';
-
-
-
+import { useState } from "react";
+import LoginPage from "./pages/LoginPage";
+import RoomPage from "./pages/RoomPage";
+import ChatPage from "./pages/ChatPage";
 
 function App() {
-const [isAuth, setIsAuth] = useState(localStorage.getItem("token"));
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("token"));
+  const [room, setRoom] = useState(null);
 
-// kullanıcının yetkisi yoksa
-if(!isAuth){
-  return <LoginPage setIsAuth={setIsAuth} />;
-}
+  //! console.log(room)
 
-//kullanıcının yetkisi varsa
+  // kullanıcının yetkisi yoksa
+  if (!isAuth) {
+    return <LoginPage setIsAuth={setIsAuth} />;
+  }
+
+  //kullanıcının yetkisi varsa
   return (
-    <div className='container'>
-      <RoomPage />
-    </div>
-  )
+    <div className="container">
+      {room ? (
 
+
+        //oda seçildiysr : sohbet
+
+        <ChatPage />
+
+      ) : (
+
+        // oda seçilmediyse : oda seçme sayfası
+        <RoomPage setRoom={setRoom} setIsAuth={setIsAuth} />
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;

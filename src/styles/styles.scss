@@ -76,5 +76,16 @@ button{
      gap: 40px;
      text-align: center;
      color: #1a1a1a;
+     input{
+        padding: 5px 10px;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        box-shadow: 2px 2px 10px rgba( 0, 0, 0, 0.25);
+        border-radius: 8px;
+     }
+     button:last-child{
+        background: crimson;
+     }
 
 }
