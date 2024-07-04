@@ -61,7 +61,7 @@ function App() {
 
         //oda seçildiysr : sohbet
 
-        <ChatPage />
+        <ChatPage room={room} setRoom={setRoom} />
 
       ) : (
 

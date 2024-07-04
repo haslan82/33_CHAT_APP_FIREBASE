@@ -89,3 +89,21 @@ button{
      }
 
 }
+
+.chat-page{
+    height: 70vh;
+    width: 70vw;
+    background: white;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+overflow: hidden;
+max-width: 800px;
+border-radius: 10px;
+
+@media (max-width: 650px){
+    width: 100vw;
+    height: 100vw;
+    border-radius: 0;
+}
+}
