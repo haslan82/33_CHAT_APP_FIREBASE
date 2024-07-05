@@ -103,7 +103,41 @@ border-radius: 10px;
 
 @media (max-width: 650px){
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     border-radius: 0;
 }
+}
+.chat-page header{
+    background: #4d4c7d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    button{
+        background: #f99417;
+    }
+}
+
+.chat-page form{
+    background: #4d4c7d;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+    input{
+        width: 50%;
+        border-radius: 10px;
+        border: none;
+        padding: 5px 10px;
+        box-shadow: 2px 2px 2px black;
+        font-size: 15px;
+    }
+    button{
+        background: #f99417;
+        
+    }
+}
+
+.chat-page main{
+flex: 1;
 }
