@@ -1,13 +1,17 @@
-# React + Vite
+## Chat-App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project aims to create a simple chat application using Firebase. Firebase provides features such as real-time database and authentication, enabling you to build fast and reliable chat applications.
 
-Currently, two official plugins are available:
+### Usage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Upon launching the application, users should log in via Firebase authentication.
+- After logging in, users can join chat rooms, send messages, and view messages from other users.
+- Thanks to real-time communication, new messages are instantly delivered to other users.
 
+### For live project
 
+- https://chat-app-fire-base.vercel.app/
 
-yeni react projesindeyim
+### Project gif
 
+![](./public/Chat.gif)
