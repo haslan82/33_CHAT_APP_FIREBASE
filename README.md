@@ -1,8 +1,8 @@
-## Chat-App
+# Chat-App
 
 This project aims to create a simple chat application using Firebase. Firebase provides features such as real-time database and authentication, enabling you to build fast and reliable chat applications.
 
-### Usage
+## Usage
 
 - Upon launching the application, users should log in via Firebase authentication.
 - After logging in, users can join chat rooms, send messages, and view messages from other users.
@@ -12,9 +12,9 @@ This project aims to create a simple chat application using Firebase. Firebase p
 
 - https://chat-app-fire-base.vercel.app/
 
-### Project gif
+### Gif
 
 ![](./public/Chat.gif)
 
 
-##  Designed by <a href="https://www.linkedin.com/in/h%C3%BCseyin-aslan-128519203/" target="_blank">Hüseyin ASLAN</a> 
+###  Designed by <a href="https://www.linkedin.com/in/h%C3%BCseyin-aslan-128519203/" target="_blank">Hüseyin ASLAN</a> 
